@@ -1,0 +1,29 @@
+.btn-Delet {
+  padding: 3px 7px;
+  outline: none;
+  border: none;
+  background-color: #fca5a5;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: vazir;
+  font-size: 0.8rem;
+}
+.btn-Delet:hover {
+  background-color: #ef4444;
+  color: #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.contact-list-box {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: justify;
+  padding: 8px 18px;
+  background-color: #dcfce7;
+  color: #3f3f46;
+  margin-top: 20px;
+  border-radius: 8px;
+}

@@ -1,0 +1,58 @@
+::before,
+::after,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.navBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #4b5563;
+  width: 100%;
+  color: #f9fafb;
+  height: 70px;
+  margin-top: 0;
+}
+
+.listNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  height: 70px;
+  align-content: center;
+  align-self: center;
+}
+
+.navBox li {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+.listNav li :hover {
+  background-color: #334155;
+  color: #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #f9fafb;
+  padding: 1.2rem;
+  text-align: center;
+  height: 70px;
+}
+
+.humbergerIcon {
+  padding: 1.2rem;
+  cursor: pointer;
+}

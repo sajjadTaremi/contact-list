@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import AboutUsPage from "./Components/Pages/AboutUsPage";
+import ContactManager from "./Components/AddContact/ContactManager";
 
-function App() {
+import Dashboard from "./Components/Pages/Dashboard";
+import ProFile from "./Components/Pages/ProFile";
+import Layout from "./Layout/Layout";
+import NotFoundPage from "./Layout/NotFoundPage";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<ContactManager />} />
+        <Route path="/about" element={<AboutUsPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/2" element={<Navigate replace to="/" />} /> */}
+        <Route path="/profile" element={<ProFile />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Layout>
   );
-}
+};
 
 export default App;
