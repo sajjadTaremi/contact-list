@@ -10,7 +10,7 @@ const ContactList = ({ contacts, onDelet, addToast }) => {
           <div className="contact-list-box" key={id}>
             <div>
               <p>نام : {name}</p>
-              <p>نام : {email}</p>
+              <p>ایمیل: {email}</p>
             </div>
             <div>
               {/* <button
