@@ -1,7 +1,7 @@
 import "./ContactManager.css";
 import "./AddContact";
 import AddContact from "./AddContact";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ContactList from "../ContactList/ContactList";
 const ContactManager = () => {
   const [contacts, setContacts] = useState([]);
@@ -18,6 +18,18 @@ const ContactManager = () => {
       { id: Math.ceil(Math.random() * 1000), ...contact },
     ]);
   };
+
+  useEffect(() => {
+    const saveContacts = JSON.parse(localStorage.getItem("contacts"));
+    if (saveContacts) {
+      setContacts(saveContacts);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("contacts", JSON.stringify(contacts));
+  }, [contacts]);
+
   return (
     <>
       <div className="headerContactList">

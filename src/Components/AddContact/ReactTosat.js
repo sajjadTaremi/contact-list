@@ -44,6 +44,6 @@ export const ToastDemoDelet = ({ onDelet, id }) => {
 
 export const ToastBtnDelet = ({ onDelet, id, addToast }) => (
   <ToastProvider>
-    <ToastDemoDelet onDelet={onDelet} id={id} useToasts={addToast} />
+    <ToastDemoDelet onDelet={onDelet} id={id} addToast={addToast} />
   </ToastProvider>
 );

@@ -12,6 +12,11 @@ const AddContact = ({ submitHandler }) => {
   };
 
   const submitForm = (e) => {
+    if (!contact.name || !contact.email) {
+      alert("لطفا اطلاعات را کامل وارد کنید...");
+      return;
+    }
+
     e.preventDefault();
     submitHandler(contact);
     setContact({ name: "", email: "" });
