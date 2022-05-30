@@ -11,19 +11,18 @@ const ContactManager = () => {
 
   const deletHandler = async (id) => {
     try {
+      await deletOneContact(id);
       const filteredContact = contacts.filter((c) => c.id !== id);
       setContacts(filteredContact);
-      await deletOneContact(id);
-    } catch (error) {}
+    } catch (error) {
+      console.log("error 404");
+    }
   };
 
   const submitHandler = async (contact) => {
     try {
-      setContacts([
-        ...contacts,
-        { id: Math.ceil(Math.random() * 1000), ...contact },
-      ]);
-      await addOneContact(contact);
+      const { data } = await addOneContact(contact);
+      setContacts([...contacts, data]);
     } catch (error) {}
   };
 
